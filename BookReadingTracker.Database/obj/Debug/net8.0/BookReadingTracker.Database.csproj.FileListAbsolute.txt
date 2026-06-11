@@ -1,0 +1,14 @@
+E:\KSLTClass\BookReadingTracker\BookReadingTracker.Database\bin\Debug\net8.0\BookReadingTracker.Database.deps.json
+E:\KSLTClass\BookReadingTracker\BookReadingTracker.Database\bin\Debug\net8.0\BookReadingTracker.Database.dll
+E:\KSLTClass\BookReadingTracker\BookReadingTracker.Database\bin\Debug\net8.0\BookReadingTracker.Database.pdb
+E:\KSLTClass\BookReadingTracker\BookReadingTracker.Database\obj\Debug\net8.0\BookReadingTracker.Database.GeneratedMSBuildEditorConfig.editorconfig
+E:\KSLTClass\BookReadingTracker\BookReadingTracker.Database\obj\Debug\net8.0\BookReadingTracker.Database.AssemblyInfoInputs.cache
+E:\KSLTClass\BookReadingTracker\BookReadingTracker.Database\obj\Debug\net8.0\BookReadingTracker.Database.AssemblyInfo.cs
+E:\KSLTClass\BookReadingTracker\BookReadingTracker.Database\obj\Debug\net8.0\BookReadingTracker.Database.csproj.CoreCompileInputs.cache
+E:\KSLTClass\BookReadingTracker\BookReadingTracker.Database\obj\Debug\net8.0\BookReadingTracker.Database.dll
+E:\KSLTClass\BookReadingTracker\BookReadingTracker.Database\obj\Debug\net8.0\refint\BookReadingTracker.Database.dll
+E:\KSLTClass\BookReadingTracker\BookReadingTracker.Database\obj\Debug\net8.0\BookReadingTracker.Database.pdb
+E:\KSLTClass\BookReadingTracker\BookReadingTracker.Database\obj\Debug\net8.0\ref\BookReadingTracker.Database.dll
+E:\KSLTClass\BookReadingTracker\BookReadingTracker.Database\bin\Debug\net8.0\BookReadingTracker.Database.runtimeconfig.json
+E:\KSLTClass\BookReadingTracker\BookReadingTracker.Database\obj\Debug\net8.0\BookReadingTracker.Database.csproj.AssemblyReference.cache
+E:\KSLTClass\BookReadingTracker\BookReadingTracker.Database\obj\Debug\net8.0\BookReadingTracker.Database.genruntimeconfig.cache

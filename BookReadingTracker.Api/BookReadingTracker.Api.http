@@ -1,0 +1,6 @@
+@BookReadingTracker.Api_HostAddress = http://localhost:5022
+
+GET {{BookReadingTracker.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
