@@ -1,0 +1,41 @@
+@model List<BookReadingTracker.Domain.DTOs.BookReadingDto>
+
+<h1>Book Readings</h1>
+<p><a asp-action="Create" class="btn btn-primary">Start New Reading</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Book</th>
+            <th>Progress</th>
+            <th>Status</th>
+            <th>Started</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model)
+        {
+            <tr>
+                <td>@r.UserName</td>
+                <td>@r.BookTitle</td>
+                <td>@r.CurrentPage / @r.TotalPages</td>
+                <td>
+                    <span class="badge @(r.Status == "Completed" ? "bg-success" : r.Status == "In Progress" ? "bg-primary" : "bg-secondary")">
+                        @r.Status
+                    </span>
+                </td>
+                <td>@r.StartedDate?.ToShortDateString()</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@r.BookReadingId" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="UpdateProgress" asp-route-id="@r.BookReadingId" class="btn btn-sm btn-info">Progress</a>
+                    <form asp-action="MarkCompleted" asp-route-id="@r.BookReadingId" method="post" style="display:inline">
+                        <button type="submit" class="btn btn-sm btn-success">Complete</button>
+                    </form>
+                    <a asp-action="Delete" asp-route-id="@r.BookReadingId" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,32 @@
+@model BookReadingTracker.Domain.DTOs.LoginDto
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <h2 class="text-center">Login</h2>
+        <hr />
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+        }
+        <form asp-action="Login">
+            <div class="form-group mb-3">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" type="email" class="form-control" required />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" type="password" class="form-control" required />
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </div>
+            <div class="text-center mt-3">
+                <a asp-action="Register">Don't have an account? Register</a>
+            </div>
+        </form>
+    </div>
+</div>

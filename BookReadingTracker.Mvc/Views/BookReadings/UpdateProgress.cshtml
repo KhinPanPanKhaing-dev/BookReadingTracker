@@ -1,0 +1,15 @@
+@model BookReadingTracker.Domain.DTOs.BookReadingDto
+
+<h1>Update Progress</h1>
+<p><strong>@Model.BookTitle</strong> — @Model.UserName</p>
+<p>Current: @Model.CurrentPage / @Model.TotalPages pages</p>
+
+<form asp-action="UpdateProgress" method="post">
+    <input type="hidden" asp-for="BookReadingId" />
+    <div class="mb-3">
+        <label class="form-label">Current Page</label>
+        <input name="currentPage" class="form-control" type="number" min="0" max="@Model.TotalPages" value="@Model.CurrentPage" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

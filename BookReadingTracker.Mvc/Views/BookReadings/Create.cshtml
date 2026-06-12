@@ -1,0 +1,27 @@
+@model BookReadingTracker.Domain.DTOs.BookReadingDto
+
+<h1>Start New Reading</h1>
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="UserId" class="form-label">User</label>
+        <select asp-for="UserId" asp-items="@(new SelectList(ViewBag.Users, "UserId", "UserName"))" class="form-select" required>
+            <option value="">-- Select User --</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="BookId" class="form-label">Book</label>
+        <select asp-for="BookId" asp-items="@(new SelectList(ViewBag.Books, "BookId", "Title"))" class="form-select" required>
+            <option value="">-- Select Book --</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="CurrentPage" class="form-label">Current Page</label>
+        <input asp-for="CurrentPage" class="form-control" type="number" min="0" value="0" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="UserName" class="form-label">Created By</label>
+        <input asp-for="UserName" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-success">Start</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

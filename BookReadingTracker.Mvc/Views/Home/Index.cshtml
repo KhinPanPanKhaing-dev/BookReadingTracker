@@ -1,8 +1,51 @@
-﻿@{
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Book Reading Tracker</h1>
+    <p>Track your reading journey. Manage books, monitor progress, and stay on top of your reading goals.</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-3">
+        <a asp-controller="Dashboard" asp-action="Index" class="text-decoration-none">
+            <div class="card text-bg-info text-white">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Dashboard</h5>
+                    <p class="card-text">View statistics</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a asp-controller="Books" asp-action="Index" class="text-decoration-none">
+            <div class="card text-bg-primary text-white">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Books</h5>
+                    <p class="card-text">Manage books</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a asp-controller="Users" asp-action="Index" class="text-decoration-none">
+            <div class="card text-bg-success text-white">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Users</h5>
+                    <p class="card-text">Manage users</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a asp-controller="BookReadings" asp-action="Index" class="text-decoration-none">
+            <div class="card text-bg-warning text-white">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Readings</h5>
+                    <p class="card-text">Track progress</p>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>

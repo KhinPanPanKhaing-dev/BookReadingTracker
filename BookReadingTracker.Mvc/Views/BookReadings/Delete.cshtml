@@ -1,0 +1,17 @@
+@model BookReadingTracker.Domain.DTOs.BookReadingDto
+
+<h1>Delete Reading</h1>
+<p>Are you sure you want to delete this reading record?</p>
+<dl class="row">
+    <dt class="col-sm-2">User</dt>
+    <dd class="col-sm-10">@Model.UserName</dd>
+    <dt class="col-sm-2">Book</dt>
+    <dd class="col-sm-10">@Model.BookTitle</dd>
+    <dt class="col-sm-2">Status</dt>
+    <dd class="col-sm-10">@Model.Status</dd>
+</dl>
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="BookReadingId" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

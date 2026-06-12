@@ -1,0 +1,40 @@
+@model BookReadingTracker.Domain.DTOs.BookReadingDto
+
+<h1>Edit Reading</h1>
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="BookReadingId" />
+    <div class="mb-3">
+        <label asp-for="UserId" class="form-label">User</label>
+        <select asp-for="UserId" asp-items="@(new SelectList(ViewBag.Users, "UserId", "UserName"))" class="form-select" required></select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="BookId" class="form-label">Book</label>
+        <select asp-for="BookId" asp-items="@(new SelectList(ViewBag.Books, "BookId", "Title"))" class="form-select" required></select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="CurrentPage" class="form-label">Current Page</label>
+        <input asp-for="CurrentPage" class="form-control" type="number" min="0" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Status" class="form-label"></label>
+        <select asp-for="Status" class="form-select">
+            <option>Not Started</option>
+            <option>In Progress</option>
+            <option>Completed</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="StartedDate" class="form-label">Started Date</label>
+        <input asp-for="StartedDate" class="form-control" type="date" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="CompletedDate" class="form-label">Completed Date</label>
+        <input asp-for="CompletedDate" class="form-control" type="date" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="UserName" class="form-label">Modified By</label>
+        <input asp-for="UserName" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

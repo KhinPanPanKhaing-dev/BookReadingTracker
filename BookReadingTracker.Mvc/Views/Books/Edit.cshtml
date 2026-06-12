@@ -1,0 +1,28 @@
+@model BookReadingTracker.Domain.DTOs.BookDto
+
+<h1>Edit Book</h1>
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="BookId" />
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label"></label>
+        <input asp-for="Title" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Author" class="form-label"></label>
+        <input asp-for="Author" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+        <label asp-for="TotalPages" class="form-label">Total Pages</label>
+        <input asp-for="TotalPages" class="form-control" type="number" min="1" required />
+    </div>
+    <div class="mb-3">
+        <label asp-for="ModifiedBy" class="form-label">Modified By</label>
+        <input asp-for="ModifiedBy" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

@@ -1,0 +1,86 @@
+@model BookReadingTracker.Domain.DTOs.DashboardDto
+
+<h1>Dashboard</h1>
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card text-bg-primary">
+            <div class="card-body">
+                <h5 class="card-title">Total Books</h5>
+                <p class="card-text display-6">@Model.TotalBooks</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-bg-success">
+            <div class="card-body">
+                <h5 class="card-title">Total Users</h5>
+                <p class="card-text display-6">@Model.TotalUsers</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-bg-info">
+            <div class="card-body">
+                <h5 class="card-title">Total Readings</h5>
+                <p class="card-text display-6">@Model.TotalReadings</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-bg-warning">
+            <div class="card-body">
+                <h5 class="card-title">Completed</h5>
+                <p class="card-text display-6">@Model.CompletedReadings</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">Reading Status</div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between">
+                        Completed <span class="badge bg-success rounded-pill">@Model.CompletedReadings</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        In Progress <span class="badge bg-primary rounded-pill">@Model.InProgressReadings</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        Not Started <span class="badge bg-secondary rounded-pill">@Model.NotStartedReadings</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">Recent Activities</div>
+    <div class="card-body">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Book</th>
+                    <th>Progress</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var r in Model.RecentActivities)
+                {
+                    <tr>
+                        <td>@r.UserName</td>
+                        <td>@r.BookTitle</td>
+                        <td>@r.CurrentPage / @r.TotalPages</td>
+                        <td>@r.Status</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
