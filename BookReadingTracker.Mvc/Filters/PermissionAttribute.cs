@@ -29,7 +29,9 @@ public class PermissionFilter : IAuthorizationFilter
         }
 
         var hasPermission = context.HttpContext.User.Claims
-            .Any(c => c.Type == "permission" && c.Value == _permission);
+            .Where(c => c.Type == "permission")
+            .SelectMany(c => c.Value.Split(','))
+            .Any(p => p.Trim() == _permission);
 
         if (!hasPermission)
         {
